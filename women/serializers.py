@@ -8,10 +8,11 @@ from .models import Women
 
 
 class WomenSerializer(serializers.ModelSerializer):
+    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
+
     class Meta:
         model = Women
-        fields = ('title', 'content', 'cat')
-
+        fields = "__all__"
 
 # def encode():
 #     model = WomenModel("Kirill", "Kirill Content")

@@ -19,12 +19,9 @@ from rest_framework import routers
 
 from women.views import *
 
-router = routers.SimpleRouter()
-router.register(r'women', WomenViewSet)
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include(router.urls)),  # http://127.0.0.1:8000/api/v1/women/
-    # path('api/v1/womenlist/<int:pk>', WomenAPIUpdate.as_view()),
-    # path('api/v1/womendetail/<int:pk>', WomenAPIDetailView.as_view()),
+    path('api/v1/women/', WomenAPIList.as_view()),
+    path('api/v1/women/<int:pk>', WomenAPIUpdate.as_view()),
+    path('api/v1/womendelete/<int:pk>', WomenAPIDestroy.as_view()),
 ]
