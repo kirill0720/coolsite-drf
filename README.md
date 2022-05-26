@@ -9,4 +9,8 @@
 - token-based authenticaiton (djoser lib)
 - pagination
 
+### Principles check
+- SOLID
+- DRY
+
 ### Repo with the site itself is here: [coolsite-django](https://github.com/kirill0720/coolsite-django)
